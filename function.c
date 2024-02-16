@@ -1,51 +1,47 @@
 // Program to create simple calculator using switch case and function for every operation
-
 #include<stdio.h>
-void main(){
-    int add(int,int);
-    int sub(int,int);
-    int mul(int,int);
-    float div(int,int);
-    int num_1,num_2,num_3,choice;
-    printf("Enter two numbers: ");
-    scanf("%d%d",&num_1,&num_2);
-    printf("Choose an operation from below options: ");
-    printf("\n1. Addition.\n2. Subtract.\n3. Multiply.\n4. Divide");
-    printf("\nChoose an  Operation(for e.g 1 for addition): ");
-    scanf("%d",&choice);
-    switch(choice){
-        case 1: num_3=add(num_1,num_2);
-        printf("Sum=%d",num_3);
-        break;
-        case 2: num_3=sub(num_1,num_2);
-        printf("Difference=%d",num_3);
-        break;
-        case 3: num_3=mul(num_1,num_2);
-        printf("Product=%d",num_3);
-        break;
-        case 4: if(num_2==0){
-            printf("infinity");
-        }else{
-            float num_3=div(num_1,num_2);
-            printf("After division quotient=%.2f",num_3);
-        }
-        break;
-        default: printf("Invalid operation.Please select a valid option.");
-    }
-}
-int add(int x,int y){
-    int z=x+y;
-    return z;
+int add(int x ,int y){
+    return x+y;
 }
 int sub(int x,int y){
-    int z=x-y;
-    return z;
+    return x-y;
 }
 int mul(int x,int y){
-    int z=x*y;
-    return z;
+    return x*y;
 }
-float div(int x,int y){
-    float z=(float)x/(float)y;
-    return z;
+int div(int x,int y){
+    return x/y;
 }
+
+int main(){
+    int x;
+    printf("Enter x : ");
+    scanf("%d",&x);
+    int y;
+    printf("Enter y : ");
+    scanf("%d",&y);
+    int choice;
+    printf("enter the operation : ");
+    scanf("%d",&choice);
+
+    switch(choice){
+        case 1:
+        printf("Sum = %d\n",add(x,y));
+        break;
+        case 2:
+        printf("Sub = %d\n",sub(x,y));
+        break;
+        case 3:
+        printf("mul = %d\n",mul(x,y));
+        break;
+        case 4:
+        printf("Div = %d\n",div(x,y));
+        break;
+        default:{
+            printf("Invalid choice\n");
+        }
+        
+
+    }
+}
+

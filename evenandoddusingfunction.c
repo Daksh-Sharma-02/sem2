@@ -1,19 +1,25 @@
-// Even or Odd by calling user defined fxn through if statement.
-
 #include<stdio.h>
-int evenodd(int x){
+#include<stdbool.h>
+bool evenodd(int x){
     if(x%2==0){
-        printf("%d is Even ",x);
+        return 1;
     }
-    if(x%2!=0){
-        printf("%d is Odd ",x);
+    else{
+        return 0;
     }
 
 }
+
 int main(){
     int x;
-    printf("Enter x :");
+    printf("Enter x : ");
     scanf("%d",&x);
-    evenodd(x);
-}
 
+    if(evenodd(x)){
+        printf("Even\n");
+    }
+    else{
+        printf("Odd\n");
+    }
+
+}

@@ -1,3 +1,5 @@
+// Even or Odd by calling user defined fxn through if statement.
+
 #include<stdio.h>
 #include<stdbool.h>
 bool evenodd(int x){
